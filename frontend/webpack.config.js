@@ -17,11 +17,12 @@ module.exports = {
     },
     extensions: ['.ts', '.tsx', '.js', 'jsx'],
   },
-  devtool: isDevelopment ? 'eval-source-map' : 'source-map',
+  devtool: isDevelopment ? 'eval' : 'source-map',
   devServer: {
     port: 3000,
     hot: true,
     open: true,
+    historyApiFallback: true,
   },
   module: {
     rules: [
@@ -35,11 +36,15 @@ module.exports = {
         },
         exclude: /node_modules/,
       },
+      {
+        test: /\.(png|jpg)$/,
+        type: 'asset/resource',
+      },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'src/index.html',
+      template: 'public/index.html',
     }),
   ],
 };
