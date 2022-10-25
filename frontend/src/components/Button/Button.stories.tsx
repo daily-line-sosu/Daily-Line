@@ -2,14 +2,47 @@ import { Story } from '@storybook/react';
 import Button, { ButtonProps } from './Button';
 
 export default {
-  title: 'shared/Button',
+  title: 'components/Button',
   component: Button,
+  argTypes: {
+    variant: {
+      options: ['primary', 'secondary', 'text'],
+      control: { type: 'radio' },
+    },
+    size: {
+      options: ['small', 'medium', 'large'],
+      control: { type: 'radio' },
+    },
+  },
 };
 
-const Template: Story<ButtonProps> = (args: ButtonProps) => <Button {...args} />;
+const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
-export const Default = Template.bind({});
+export const primaryButton = Template.bind({});
+primaryButton.args = {
+  variant: 'primary',
+  size: 'medium',
+  children: 'Button Test',
+};
 
-Default.args = {
-  text: 'Button Test',
+export const secondaryButton = Template.bind({});
+secondaryButton.args = {
+  variant: 'secondary',
+  size: 'medium',
+  children: 'Button Test',
+};
+
+export const textButton = Template.bind({});
+textButton.args = {
+  variant: 'text',
+  size: 'medium',
+  children: 'Button Test',
+};
+
+export const disabledButton = Template.bind({});
+disabledButton.args = {
+  variant: 'primary',
+  size: 'medium',
+  children: 'Button Test',
+  disabled: true,
 };

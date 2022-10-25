@@ -1,10 +1,24 @@
 import { ButtonHTMLAttributes } from 'react';
-import Styled from './Button.styles';
+import * as Styled from './Button.styles';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  text: string;
+  fullWidth?: boolean;
+  variant: 'primary' | 'secondary' | 'text';
+  size: 'small' | 'medium' | 'large';
 }
 
-const Button = ({ text }: ButtonProps): JSX.Element => <Styled.Button>{text}</Styled.Button>;
+const Button = ({
+  fullWidth = false,
+  variant,
+  size,
+  children,
+  ...props
+}: ButtonProps): JSX.Element => {
+  return (
+    <Styled.Button fullWidth={fullWidth} variant={variant} size={size} {...props}>
+      {children}
+    </Styled.Button>
+  );
+};
 
 export default Button;
