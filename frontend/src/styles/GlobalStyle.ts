@@ -110,7 +110,7 @@ const resetCSS = css`
   }
   body {
     line-height: 1;
-    background-color: ${theme.colors.background_color};
+    background-color: ${({ theme }) => theme.colors.background_color};
   }
   ol,
   ul {

@@ -1,3 +1,6 @@
+import PALETTE from '@/constants/palette';
+import { DefaultTheme } from 'styled-components';
+
 const colors = {
   primary_color: '#FF7A00',
   primary_color_light: '#FF8D23',
@@ -13,9 +16,17 @@ const sizes = {
   xl: 1440,
 };
 
-const theme = {
+const theme: DefaultTheme = {
   colors,
   sizes,
+  red: PALETTE.RED,
+  orange: PALETTE.ORANGE,
+  yellow: PALETTE.YELLOW,
+  green: PALETTE.GREEN,
+  blue: PALETTE.BLUE,
+  purple: PALETTE.PURPLE,
+  pink: PALETTE.PINK,
+  gray: PALETTE.GRAY,
 };
 
 export default theme;

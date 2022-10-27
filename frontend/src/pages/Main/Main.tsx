@@ -5,7 +5,7 @@ import Profile from '@/components/Profile/Profile';
 import Title from '@/components/Title/Title';
 import * as Styled from './Main.styles';
 
-function Main() {
+const Main = () => {
   const todaychallenge: any = [
     {
       goal: '알고리즘 1문제',
@@ -93,6 +93,6 @@ function Main() {
       </div>
     </>
   );
-}
+};
 
 export default Main;
