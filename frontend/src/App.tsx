@@ -1,8 +1,9 @@
-import { Route, Routes, Navigate } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Main from '@/pages/Main/Main';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import Layout from './components/Layout/Layout';
+import Header from '@/components/Header/Header';
+import Footer from '@/components/Footer/Footer';
+import Layout from '@/components/Layout/Layout';
+import Mypage from '@/pages/Mypage/Mypage';
 
 const App = (): JSX.Element => {
   return (
@@ -11,6 +12,7 @@ const App = (): JSX.Element => {
         <Header />
         <Routes>
           <Route path="/" element={<Main />} />
+          <Route path="/mypage" element={<Mypage />} />
         </Routes>
       </Layout>
       <Footer />
