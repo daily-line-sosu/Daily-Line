@@ -22,13 +22,11 @@ public class User {
     @Size(max = 50)
     @Column(name = "user_email", nullable = false)
     String userEmail;
-
-    @NonNull
+    
     @Size(max = 20)
     @Column(name = "user_name", nullable = false)
     String userName;
 
-    @NonNull
     @Size(max = 200)
     @Column(name = "user_profile_image", nullable = false)
     String userProfileImage;
