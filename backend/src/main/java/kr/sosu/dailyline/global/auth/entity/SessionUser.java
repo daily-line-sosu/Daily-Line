@@ -1,5 +1,6 @@
-package kr.sosu.dailyline.domain.user.db.entity;
+package kr.sosu.dailyline.global.auth.entity;
 
+import kr.sosu.dailyline.domain.user.db.entity.User;
 import lombok.Getter;
 
 import java.io.Serializable;

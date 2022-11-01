@@ -1,11 +1,10 @@
 package kr.sosu.dailyline.global.config;
 
 import kr.sosu.dailyline.domain.user.db.entity.Role;
-import kr.sosu.dailyline.global.oauth.CustomOAuthUserService;
+import kr.sosu.dailyline.global.auth.CustomOAuthUserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
 @RequiredArgsConstructor
@@ -21,7 +20,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .headers().frameOptions().disable()
                 .and()
                 .authorizeRequests()
-                .antMatchers("/", "/css/**", "/images/**", "/js/**", "/h2-console/**").permitAll()
+                .antMatchers("/", "/css/**", "/images/**", "/js/**", "/swagger").permitAll()
                 .antMatchers("/api/users/**").hasRole(Role.USER.name())
                 .anyRequest().authenticated()
                 .and()

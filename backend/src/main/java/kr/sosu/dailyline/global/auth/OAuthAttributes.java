@@ -1,4 +1,4 @@
-package kr.sosu.dailyline.global.oauth;
+package kr.sosu.dailyline.global.auth;
 
 import kr.sosu.dailyline.domain.user.db.entity.Role;
 import kr.sosu.dailyline.domain.user.db.entity.User;
