@@ -1,6 +1,6 @@
-package kr.sosu.dailyline.global.oauth;
+package kr.sosu.dailyline.global.auth;
 
-import kr.sosu.dailyline.domain.user.db.entity.SessionUser;
+import kr.sosu.dailyline.global.auth.entity.SessionUser;
 import kr.sosu.dailyline.domain.user.db.entity.User;
 import kr.sosu.dailyline.domain.user.db.repository.UserRepository;
 
@@ -14,6 +14,7 @@ import org.springframework.security.oauth2.core.user.DefaultOAuth2User;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 import java.util.Collections;
 
