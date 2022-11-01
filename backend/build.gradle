@@ -46,7 +46,7 @@ dependencies {
 	annotationProcessor "jakarta.annotation:jakarta.annotation-api"
 
 	// Swagger 활성화
-	implementation group: 'io.springfox', name: 'springfox-boot-starter', version: '3.0.0'
+	implementation 'org.springdoc:springdoc-openapi-ui:1.6.6'
 
 	// 유효성 검사
 	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: '2.7.0'
