@@ -38,4 +38,5 @@ out/
 
 ### properties ###
 application.yml
+application-dev.yml
 application-oauth.yml
