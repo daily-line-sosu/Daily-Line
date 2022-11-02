@@ -10,7 +10,7 @@ const Profile = ({ image, nickname }: ProfileProps): JSX.Element => {
   return (
     <Styled.Profile>
       <Styled.ProfileImage>
-        <Image shape="cicle" src={image} />
+        <Image shape="circle" src={image} />
       </Styled.ProfileImage>
       <div>{nickname}</div>
     </Styled.Profile>

@@ -1,12 +1,11 @@
 import styled, { css } from 'styled-components';
-import { ImageProps } from './Image';
 
 interface Props {
-  shape: 'default' | 'cicle';
+  shape: 'default' | 'circle';
 }
 
 const shapeCSS = {
-  cicle: css`
+  circle: css`
     border-radius: 50%;
   `,
   default: css``,

@@ -7,6 +7,7 @@ module.exports = {
   mode: isDevelopment ? 'development' : 'production',
   entry: './src/index.tsx',
   output: {
+    publicPath: '/',
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,

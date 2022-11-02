@@ -25,7 +25,7 @@ const Header = () => {
               <Link to="/mypage">
                 <Image
                   src="https://i.pinimg.com/originals/ab/dc/b7/abdcb72e1cdeb57afc6e3d280fbc3a82.jpg"
-                  shape="cicle"
+                  shape="circle"
                 />
               </Link>
             </Styled.HeaderMenuProfile>
