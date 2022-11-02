@@ -1,7 +1,7 @@
 import Image from '@/components/Image/Image';
 import Progress from '@/components/Progress/Progress';
 import Title from '@/components/Title/Title';
-import * as Styled from './Mypage.steyls';
+import * as Styled from './Mypage.styles';
 
 const Mypage = () => {
   const arr = [
@@ -21,7 +21,7 @@ const Mypage = () => {
         <Styled.MypageProfileImage>
           <Image
             src="https://i.pinimg.com/originals/ab/dc/b7/abdcb72e1cdeb57afc6e3d280fbc3a82.jpg"
-            shape="cicle"
+            shape="circle"
           />
         </Styled.MypageProfileImage>
         <div className="nickname">닉네임</div>

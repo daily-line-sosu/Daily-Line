@@ -1,5 +1,4 @@
 import Box from '@/components/Box/Box';
-import Input from '@/components/Input/Input';
 import Select from '@/components/Select/Select';
 import { useEffect, useState } from 'react';
 import * as Styled from './Register.styles';
