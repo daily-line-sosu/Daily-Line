@@ -2,15 +2,22 @@ import { InputHTMLAttributes } from 'react';
 import * as Styled from './Input.styles';
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  width: 'small' | 'medium' | 'full';
-  name?: string;
+  variant?: 'default' | 'text';
+  shape?: 'default' | 'circle';
+  width?: 'small' | 'medium' | 'full';
+  status?: 'active' | 'disabled';
 }
 
-const Input = ({ width, name, ...props }: InputProps): JSX.Element => {
+const Input = ({
+  width = 'full',
+  variant = 'default',
+  shape = 'default',
+  status = 'active',
+  ...props
+}: InputProps): JSX.Element => {
   return (
     <>
-      {name ? <Styled.InputName>{name}</Styled.InputName> : ''}
-      <Styled.Input width={width} {...props} />
+      <Styled.Input width={width} variant={variant} status={status} shape={shape} {...props} />
     </>
   );
 };

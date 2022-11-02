@@ -4,6 +4,7 @@ import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 import Layout from '@/components/Layout/Layout';
 import Mypage from '@/pages/Mypage/Mypage';
+import Register from '@/pages/Register/Register';
 
 const App = (): JSX.Element => {
   return (
@@ -13,6 +14,7 @@ const App = (): JSX.Element => {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/mypage" element={<Mypage />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </Layout>
       <Footer />

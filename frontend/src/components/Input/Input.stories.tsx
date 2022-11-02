@@ -9,6 +9,14 @@ export default {
       options: ['small', 'medium', 'full'],
       control: { type: 'radio' },
     },
+    shape: {
+      options: ['default', 'circle'],
+      control: { type: 'radio' },
+    },
+    variant: {
+      options: ['default', 'text'],
+      control: { type: 'radio' },
+    },
   },
 };
 
@@ -27,4 +35,16 @@ mediumInput.args = {
 export const fullInput = Template.bind({});
 fullInput.args = {
   width: 'full',
+};
+
+export const circleInput = Template.bind({});
+circleInput.args = {
+  width: 'small',
+  shape: 'circle',
+};
+
+export const textInput = Template.bind({});
+textInput.args = {
+  width: 'small',
+  variant: 'text',
 };
