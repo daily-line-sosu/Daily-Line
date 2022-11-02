@@ -66,7 +66,7 @@ const Main = () => {
             </Styled.MainMenuItem>
           ))}
           <Styled.MainMenuItem>
-            <Input width="small" placeholder="검색어 입력..." />
+            <Input width="small" shape="circle" placeholder="검색어 입력..." />
           </Styled.MainMenuItem>
         </Styled.MainMenu>
         <Styled.MainChallenge>

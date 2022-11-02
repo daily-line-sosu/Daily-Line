@@ -36,13 +36,26 @@ const sizeCSS = {
 export const Button = styled.button<ButtonProps>`
   cursor: pointer;
   border-radius: 0.4rem;
-
+  position: relative;
   &:disabled {
     background: ${({ theme }) => theme.colors.gray_light};
     cursor: default;
   }
-
   width: ${({ fullWidth }) => (fullWidth ? '100%' : 'auto')};
   ${({ size }) => sizeCSS[size]}
   ${({ variant }) => variantCSS[variant]}
+`;
+
+export const ButtonText = styled.div`
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  & > div {
+    background-color: white;
+    display: inline-block;
+    padding: 0 4px;
+    font-size: 0.8rem;
+    color: ${({ theme }) => theme.colors.primary_color};
+  }
 `;

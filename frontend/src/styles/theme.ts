@@ -3,7 +3,7 @@ import { DefaultTheme } from 'styled-components';
 
 const colors = {
   primary_color: '#FF7A00',
-  primary_color_light: '#FF8D23',
+  primary_color_light: '#FFA25F',
   gray_light: '#D9D9D9',
   text_color: '#000000',
   background_color: '#FFFFFF',
