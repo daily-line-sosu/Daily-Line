@@ -14,7 +14,7 @@ public class Tag {
 
     @Id
     @Column(name = "tag_seq")
-    private int tagSeq;
+    private Integer tagSeq;
 
     @Column(name = "tag_name")
     private String tagName;
