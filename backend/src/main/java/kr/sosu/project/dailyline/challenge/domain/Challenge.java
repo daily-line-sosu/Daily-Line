@@ -1,5 +1,6 @@
 package kr.sosu.project.dailyline.challenge.domain;
 
+import kr.sosu.project.dailyline.user.domain.User;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -50,4 +51,12 @@ public class Challenge {
 
     @Column(name = "challenge_color")
     private String challengeColor;
+
+    @OneToOne
+    @JoinColumn(name = "tag_seq", insertable = false, updatable = false)
+    private Tag tag;
+
+    @ManyToOne
+    @JoinColumn(name = "user_seq", insertable = false, updatable = false)
+    private User user;
 }
