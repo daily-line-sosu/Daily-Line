@@ -1,11 +1,15 @@
 package kr.sosu.project.dailyline.user.domain;
 
+import kr.sosu.project.dailyline.challenge.domain.Challenge;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @NoArgsConstructor
@@ -37,6 +41,9 @@ public class User {
     @Enumerated(EnumType.STRING)
     @Column(name = "user_role")
     private Role role;
+
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+    private List<Challenge> challengeList = new ArrayList<>();
 
     @Builder
     public User(String userEmail, String userName, String userProfileImage, Role role) {
