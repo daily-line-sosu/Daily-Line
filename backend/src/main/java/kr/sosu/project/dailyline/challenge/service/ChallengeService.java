@@ -22,4 +22,11 @@ public class ChallengeService {
 
         return ChallengeFindAllResponse.fromEntity(findChallenges);
     }
+
+    @Transactional(readOnly = true)
+    public ChallengeFindAllResponse findChallengesByTag(Integer tagSeq, Pageable pageable) {
+        Page<Challenge> findChallenges = challengeRepository.findChallengesByTagSeq(tagSeq, pageable);
+
+        return ChallengeFindAllResponse.fromEntity(findChallenges);
+    }
 }
